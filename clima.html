@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Clima de la Provincia Guanacaste</title>   
+
+	<!-- Hoja de estilos CSS de Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>	
+	
+	<!-- Biblioteca JS de Leaflet -->
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>	
+	
+	<!-- Complemento Leaflet-providers -->
+	<script src="js/leaflet-providers.js"></script>	
+	
+	<!-- Complemento Leaflet-choropleth -->
+    <script src="js/choropleth.js"></script>	
+
+	<!-- Hoja de estilos CSS adicionales -->
+	<link rel="stylesheet" href="css/estilos.css"/>		
+	
+	<!-- En HTML: enlace a Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+	integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	crossorigin="anonymous" />	
+
+	<!-- Enlace a biblioteca JQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous">
+	</script>	
+
+</head>
+
+<body>
+
+	<h1>Clima de la Provincia de Guanacaste <img src="img/termo.png" alt="termometro" width="64" height="64" ><br></h1>
+
+
+
+	<div class="row">
+		<div class="columna" >
+		<img id="img2" src="img/clima.jpg" alt="IMN" width="488" height="228"><br>
+	   </div>
+	  
+		<div class="column2a" >
+		 <p><a href="index.html"><em>Guanacaste</em></a> experimenta poca lluvia y calor constante a partir de noviembre a abril y una estación lluviosa de mayo a noviembre. 
+		Su clima cálido y seco hace que los bosques secos tropicales sean la vegetación natural de la provincia. 
+		La única excepción es la parte del altiplano de la provincia, que consiste en las laderas superiores del Pacífico-frente de los volcanes en la Cordillera de Guanacaste y la mitad norte de la Cordillera de Tilarán. 
+		Las condiciones frías y húmedas a lo largo de estas cordilleras sustentan frondosos bosques nubosos.<br></p>
+
+		<p>La principal razón de la diversidad en el clima de Costa Rica son las varias elevaciones en las que las diferentes zonas del país se encuentran. P
+		or ejemplo Guanacaste tiene un clima seco árido ya que se encuentra en las tierras bajas.El tiempo perfecto para visitar Guanacaste es durante todo el año. No importa si usted visita durante la estación seca o durante la estación húmeda, ambos proporcionan ventajas espectaculares.<br></p>
+
+		<p>La estación seca proporciona a los amantes del verano mucho tiempo de sol para un buen bronceado, mientras que la temporada de lluvias hace que los árboles florezcan con explosiones de colores y fragancias. 
+		Las colinas se tornan alfombradas de verde brillante.<br></p>
+		
+		<p>El clima de Guanacaste, depende basicamente de patrones de viento, de temperatura y de precipitaciones. Un ejemplo es el clima de la cuenca del Golfo de Nicoya, que está determinada por la influencia de los vientos alisios y los vientos del oeste. 
+		La estación seca es de octubre a mayo, debido a que los vientos alisios se presentan con más intesidad en esta zona, evitando la humedad llegue al Pacífico. La sequía es más severa en las partes bajas de la cuenca. 
+		Las tierras altas tienen un déficit de humedad que comprende aproximadamente 35 días en las llanuras y las zonas costeras es de aproximadamente 70-150 días.<br></p>
+		</div>
+	</div>
+
+
+	<h2 id="titulo_mapalitoral">Mapa del  clima de la Provincia de Guanacaste</h2>
+ 
+	 <div id="panel" style = "margin-left:0px; background-color:#D3D3D3;">
+		<label>Institución dueña de la estación </label>
+		<select id="estilo" onchange="estiloSelect()">
+		  <option value="SENARA" >SENARA</option>
+		  <option value="ICE">ICE</option>
+		  <option value="IMN" >IMN</option>
+		  <option value="TODOS"  >Todos</option>
+		</select>
+	</div>	  
+ 
+  <!-- Elemento div para contener el mapa -->
+	<div id="mapid" ></div>
+
+	<!-- Código principal en JS -->
+	<script src="js/scripts_clima.js"></script>	
+
+	<!-- Controles para la opacidad de la capa de temperatura -->
+	<div id="espacio" >
+		<h5>Opacidad de la capa de temperatura: <span id="span-opacity">0.5</span></h5>
+		<input type='range' id='sld-opacity' min='0' max='1' step='0.1' value='0.5' onchange='updateOpacity();'>
+	</div>
+
+</body>
+</html>

@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Área de conservación Guanacaste</title>   
+
+	<!-- Hoja de estilos CSS de Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>	
+	<!-- Biblioteca JS de Leaflet -->
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>	
+	<!-- Complemento Leaflet-providers -->
+	<script src="js/leaflet-providers.js"></script>	
+
+	<!-- Hoja de estilos CSS adicionales -->
+	<link rel="stylesheet" href="css/estilos.css"/>		
+	
+	<!-- En HTML: enlace a Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+	integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	crossorigin="anonymous" />	
+
+	<!-- Enlace a biblioteca JQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous">
+	</script>	
+
+</head>
+
+<body>
+
+	<h1>Área de conservación Guanacaste (ACG)</h1>
+
+	<div class="rowa">
+		<div class="columna" >
+		<img id="img" src="img/ACG.jpg" alt="ACG" width="282" height="282" ><br>
+	   </div>
+	  
+		<div class="column2a" >
+		 <p>El corazón del Área de Conservación Guanacaste (ACG) comprende un solo bloque bio-geográﬁco ininterrumpido de área silvestre protegida de 163,000 hectáreas, 
+		que se extiende desde el área marina en los alrededores del archipiélago Islas Murciélago en el océano Paciﬁco, pasando por la meseta de Santa Rosa hasta la cima
+		de los volcanes Orosí, Cacao y Rincón de la Vieja de la Cordillera Volcánica de Guanacaste y continuando hasta las tierras bajas del lado caribe del Costa Rica.<br></p>
+
+		<p>El ACG contiene juntos e integrados cuatro de los cinco ecosistemas principales del trópico: marino/costero, bosque seco, bosque nuboso y bosque lluvioso y
+		representa el único transecto conservado de este tipo en el nuevo mundo.<br></p>
+		
+		<p>​​El Área de Conservación Guanacaste, se encuentra ubicada al noroeste de Costa Rica, en la provincia de <a href="index.html"><em>Guanacaste</em></a>. 
+		Está compuesta por Los Parques Nacionales: Santa Rosa, Guanacaste y Rincón de la Vieja; además de la Estación Experimental Forestal Horizontes y el 
+		Refugio de Vida Silvestre Bahía Junquillal.<br></p>
+		</div> 
+	  
+	 </div>
+
+	<br><br><br><br><br><br><br><br><br><br><br><br><br><br>
+
+	<h2 id="titulo_mapa">Mapa de Área Protegida dentro del ACG</h2>
+	  <!-- Elemento div para contener el mapa -->
+	<div id="mapid" ></div>
+	<!-- Código principal en JS -->
+	<script src="js/scripts_ap.js"></script>	
+	
+</body>
+</html>

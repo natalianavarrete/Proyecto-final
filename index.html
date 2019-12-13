@@ -1,0 +1,86 @@
+<!-- 
+Universidad de Costa Rica - Universidad Nacional
+Maestría en Sistemas de Información Geográfica y Teledetección
+Programación de aplicaciones geoespaciales en la Web
+Profesor: M.Sc. Manuel Vargas Del Valle
+Estudiantes: Andrey Villalobos Jiménez
+			 Natalia Navarrete Flores
+			 
+			 
+		PROYECTO FINAL 
+
+Indicaciones: Publique en GitHub Pages una página web que contenga un mapa Leaflet con
+
+- Al menos dos capas base (10%)
+- Al menos una capa overlay tipo raster (10%)
+- Al menos una capa overlay tipo GeoJSON de polígonos con un mapa de coropletas y su respectiva leyenda (25%)
+- Al menos una capa overlay tipo GeoJSON de puntos, líneas o polígonos con estilo diferenciado según el valor de un atributo categórico (ej. tipo, categoría) (15%) 
+- Una lista que permita seleccionar los puntos de acuerdo con el valor del atributo mencionado en el punto anterior (15%)CASI
+- Un control de escala en formato del sistema métrico decimal (5%)
+- La página debe contener texto debidamente redactado (5%) y al menos una imagen (5%). Todos los contenidos deben guardar relación entre sí.
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+<head>
+	<meta charset="UTF-8">
+	<title>Proyecto final Programación</title>   
+
+	<!-- Hoja de estilos CSS de Leaflet -->
+	<link rel="stylesheet" href="https://unpkg.com/leaflet@1.5.1/dist/leaflet.css" integrity="sha512-xwE/Az9zrjBIphAcBb3F6JVqxf46+CDLwfLMHloNu6KEQCAWi6HcDUbeOfBIptF7tcCzusKFjFw2yuvEpDL9wQ==" crossorigin=""/>	
+	
+	<!-- Biblioteca JS de Leaflet -->
+	<script src="https://unpkg.com/leaflet@1.5.1/dist/leaflet.js" integrity="sha512-GffPMF3RvMeYyc1LWMHtK8EbPv0iNZ8/oTtHPx9/cc2ILxQ+u905qIwdpULaqDkyBKgOaB57QTMg7ztg8Jm2Og==" crossorigin=""></script>	
+	
+	<!-- Complemento Leaflet-providers -->
+	<script src="js/leaflet-providers.js"></script>	
+	
+	<!-- Hoja de estilos CSS adicionales -->
+	<link rel="stylesheet" href="css/estilos.css"/>		
+	
+	<!-- En HTML: enlace a Font Awesome -->
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css"
+	integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp"
+	crossorigin="anonymous" />	
+
+	<!-- Enlace a biblioteca JQuery -->
+	<script src="https://code.jquery.com/jquery-3.3.1.min.js"
+	 integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	 crossorigin="anonymous">
+	</script>	
+</head>
+
+
+<body>
+
+<h1>Provincia de Guanacaste <img src="img/arbol.png" alt="árbol" width="120" height="65"><br></h1>
+
+<div class="row">
+	<div class="columna" >
+		<img id="img" src="img/guana.png" alt="Guanacaste" width="355" height="352" ><br>
+	</div>
+	  
+	<div class="column2a" >
+		<p>Guanacaste es la provincia número 5 de Costa Rica, localizada en el extremo noroeste del país. Posee una superficie de 10 140 km², siendo la segunda provincia más grande del país, pero también la más despoblada con aproximadamente 326 953 personas.
+		Su cabecera es Liberia, otras ciudades importantes son Nicoya y Santa Cruz.<br>  <br>
+		Su relieve combina las cimas volcánicas de la cordillera de Guanacaste con amplias llanuras que se abren hacia el Pacífico. 
+		Guanacaste es famosa por sus paisajes, sus playas que bordean el <a href="litoral.html"><em>litoral</em></a> del océano Pacífico, y un  <a href="clima.html"><em>clima</em></a>  mucho más soleado y seco que en el resto del país, lo que la convierte en uno de los polos turísticos principales de Costa Rica.<br><br>
+		En la provincia se encuentra el Área de Conservación Guanacaste <a href="ACG.html"><em>(ACG)</em></a>, la cual es sitio Patrimonio de la Humanidad declarado por la Unesco en el año 1999. Comprende, entre otros, el Parque nacional Santa Rosa, el Parque nacional Guanacaste y el Parque nacional Rincón de la Vieja, 
+		abarcando 1470 km² de zonas protegidas. En Guanacaste también se encuentran los parques nacionales Palo Verde y Barra Honda. Posee una de las pocas zonas azules del mundo, en la península de Nicoya.<br><br>
+		Los datos de poblamiento de la región de Guanacaste se remontan a 12 000 años, uno de los más antiguos del país. Durante la época precolombina, estuvo habitada primeramente por los corobicíes, de cultura del Área Intermedia, 
+		y luego por grupos chorotegas y nahuas, de cultura mesoamericana. Algunas de las expresiones culturales de estos grupos, como la cerámica nicoyana, han subsistido hasta la actualidad y son patrimonio nacional de Costa Rica. En la península de Nicoya se encuentra la Reserva Indígena Matambú.
+		Guanacaste es cuna de muchos aspectos del folclor de Costa Rica, tales como la música, instrumentos como la marimba y el quijongo, danzas tradicionales como el punto guanacasteco, la gastronomía derivada del maíz y del ganado, y la cultura propia de la vida de la hacienda y el campo.</p>
+	</div>
+</div>
+
+	<h2 id="titulo_mapa"> Mapa de ubicación</h2>
+	<!-- Elemento div para contener el mapa -->
+	<div id="mapid" ></div>
+
+
+	<!-- Código principal en JS -->
+	<script src="js/scripts.js"></script>	
+		
+</body>
+</html>

@@ -1,0 +1,22 @@
+DatasetHeader Begin
+	Version	= "6.0"
+	Name	= "bio1_cr.png.ers"
+	DataSetType	= ERStorage
+	DataType	= Raster
+	ByteOrder	= LSBFirst
+	RasterInfo Begin
+		CellType	= Signed32BitInteger
+		NrOfLines	= 382
+		NrOfCellsPerLine	= 411
+		NrOfBands	= 1
+		CellInfo Begin
+			Xdimension	= 0.00833333
+			Ydimension	= 0.00833333
+		CellInfo End
+		RegistrationCoord Begin
+			Eastings	= -85.979072453958
+			Northings	= 11.219773428777
+		RegistrationCoord End
+		NullCellValue	= -9999
+	RasterInfo End
+DatasetHeader End
